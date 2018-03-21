@@ -1,0 +1,58 @@
+/*
+***********************************************************
+***********************************************************
+ 
+NAME-BHONESH CHAWLA
+REGNO-20164017
+BATCH-CS-1
+CONTACT-+918619127663
+EMAIL-rajachawla778@gmail.com
+***********************************************************
+***********************************************************
+*/
+ 
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define z long long int
+using namespace std ;
+int main()
+{
+	z t;
+	sf("%lld",&t);
+	while(t--)
+	{
+ 
+			double sum=0;
+			z n ;
+			map <z, z> my;
+			sf("%lld",&n);
+ 
+			z a[n];
+			for (int i = 0; i < n; i++)
+        		{
+        			sf("%lld",&a[i]);
+        			my[a[i]]++;
+        		}
+ 
+ 
+			map <z, z> :: iterator itr;
+			sum=0;
+			for (itr = my.begin(); itr != my.end(); ++itr)
+    		{
+        				
+        					sum+=(double)(itr->second-1);
+    		}
+ 
+ 
+ 
+ 
+			
+			pf("%lld\n",(z) ( sum )      ) ;				
+ 
+ 
+ 
+ 
+	}
+	return 0;
+}   

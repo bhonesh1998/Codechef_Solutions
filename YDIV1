@@ -1,0 +1,75 @@
+/*
+***********************************************************
+***********************************************************
+ 
+NAME-BHONESH CHAWLA
+REGNO-20164017
+BATCH-CS-1
+CONTACT-+918619127663
+EMAIL-rajachawla778@gmail.com
+***********************************************************
+***********************************************************
+*/
+ 
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define z long long int
+using namespace std ;
+ 
+ 
+void sol(z n)
+{
+    
+     set <int, greater <int> > wow;
+ 
+     wow.clear();
+ 
+    while (n%2 == 0)
+    {
+        //pf("%d ", 2);
+        wow.insert(2);
+        n = n/2;
+    }
+ 
+    for (z i = 3; i <= sqrt(n); i = i+2)
+    {
+        
+        while (n%i == 0)
+        {
+            //pf("%lld ", i);
+             wow.insert(i);
+            n = n/i;
+        }
+    }
+ 
+    if (n > 2)
+    	 wow.insert(n);
+        //pf ("%lld ", n);
+ 
+        set <int, greater <int> > :: reverse_iterator itr;
+ 
+ 
+        for (itr = wow.rbegin(); itr != wow.rend(); ++itr)
+    {
+        cout << *itr << ' ';
+    }
+ 
+    pf("\n");
+}
+int main()
+{
+	
+	string s;
+	z t,v,c,q1,q2,q3,q4,q5;
+	
+	sf("%lld",&t);
+ 
+	while(t--)
+	{ z n ;
+			sf("%lld",&n);
+			sol(n);
+ 
+	}
+	return 0;
+}  

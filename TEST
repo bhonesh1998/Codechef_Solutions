@@ -1,0 +1,16 @@
+
+#include <stdio.h>
+int main(void)
+{
+    int i;
+    scanf("%d",&i);
+    if(i!=42 && i>=-99 && i<=99)
+    printf("%d\n",i);
+  while(i!=42 && i>=-99 && i<=99)
+  {
+      scanf("%d",&i);
+      if(i!=42)
+      printf("%d\n",i);
+  }
+    return 0;
+}

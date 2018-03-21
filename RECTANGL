@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define z long long int 
+#define mod 1000000007
+using namespace std; 
+int main()
+{
+    z t;
+    sf("%lld",&t);
+    while(t--)
+    {
+   z a,b,c,d;
+   sf("%lld%lld%lld%lld",&a,&b,&c,&d);
+   if( a==c && b==d ||a==b && c==d || a==d && b==c  )
+   pf("YES\n");
+   else
+   pf("NO\n"); 
+    }
+   
+}
+ 

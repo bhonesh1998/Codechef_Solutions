@@ -1,0 +1,45 @@
+/*
+***********************************************************
+***********************************************************
+ 
+NAME-BHONESH CHAWLA
+REGNO-20164017
+BATCH-CS-1
+CONTACT-+918619127663
+EMAIL-rajachawla778@gmail.com
+***********************************************************
+***********************************************************
+*/
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define z long long int
+using namespace std ;
+ 
+ 
+ 
+int main()
+{
+ 
+	 int t,i,k,c;
+   char s[1001],j[1001];
+   sf("%d",&t);
+   while(t--)
+   {         c=0;
+             sf("%s",j);
+             sf("%s",s);
+             for(i=0;i<strlen(s);i++)
+             for(k=0;k<strlen(j);k++)
+                             
+                             if(s[i]==j[k])
+                             {c++;
+                            
+                              break;}
+                              
+                              
+                            pf("%d\n",c);
+                            
+                            }
+                       
+                            return 0;
+                        }

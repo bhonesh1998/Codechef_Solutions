@@ -1,0 +1,74 @@
+/*
+***********************************************************
+***********************************************************
+ 
+NAME-BHONESH CHAWLA
+REGNO-20164017
+BATCH-CS-1
+CONTACT-+918619127663
+EMAIL-rajachawla778@gmail.com
+***********************************************************
+***********************************************************
+*/
+ 
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define z long long int
+using namespace std ;
+int main()
+{
+ 
+	int t,n,i,j,l,r,f,q,d;
+	z c ;
+	sf("%d %d",&n,&q);
+	
+	int a[n][31]={0},b[n+1][31]={0};
+		
+		for(i=0;i<n;i++){
+			sf("%d",&f);
+		    j=0;
+		    while(f>0){
+		        a[i][j]=f&1;
+		        j++;
+		        f=f>>1;
+		    }for(j=0;j<31;j++){
+		        b[i+1][j]=b[i][j]+a[i][j];
+		    }
+		   
+		}
+		  
+		   
+		
+		while(q>0){
+ 
+			int br[31]={0};
+		   
+		   	sf("%d %d",&l,&r);
+		   
+		    l--;
+		    
+		        for(j=0;j<31;j++){
+		            br[j]=b[r][j]-b[l][j];
+		        }
+		    
+		    c=0;d=(r-l);
+		    for(i=30;i>0;i--){
+		        if(2*br[i]<d){
+		            c=c+1;
+		        }
+		        
+		        c=c<<1;
+		    }if(2*br[i]<d){
+		            c=c+1;
+		        }
+		    
+		  pf("%lld\n",c);
+ 
+		  q--;
+		   
+		}
+	
+	return 0;
+} 
+

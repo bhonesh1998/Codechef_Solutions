@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+ 
+int main() {
+	long long int n;
+	scanf("%lld",&n);
+	n=n%6;
+	if( n==0 || n==1 || n==3 )
+	printf("yes");
+	else
+	printf("no");
+	return 0;
+} 
