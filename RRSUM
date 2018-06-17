@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+using namespace std;
+ 
+int main()
+{
+ 	//vector<z> v;
+ 
+	//map< z,z > ma;
+	z n,m,i,j;
+	sf("%lld%lld",&n,&m);
+	z c=0;
+	while(m--)
+	{
+		z q;
+		sf("%lld",&q);
+		if(q < (n+1))
+			c = 0;
+		else if(q > 2*n)
+			c = 3*n-q+1;
+		else
+			c = q-n-1;
+		
+		cout << c << endl;
+	}
+ 
+ 
+ 
+ 
+ 
+ 
+}  
